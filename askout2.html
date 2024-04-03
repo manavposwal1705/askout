@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go Out With Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('akansha mam.jpg'); /* Add the path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        #invitation {
+            background-color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        button {
+            background-color: #ff69b4;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #d13e85;
+        }
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: heartBeat 1s infinite;
+            color: #ff69b4;
+            font-size: 48px;
+        }
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="invitation">
+        <h1>Will You Go Out With Me?</h1>
+        <p>Dear [Her Name],</p>
+        <p>It would mean the world to me if you would join me for a romantic date. I've planned something special and I hope you'll say yes.</p>
+        <p>Please let me know your answer.</p>
+        <button onclick="accept()">Yes</button>
+        <button onclick="reject()">No</button>
+    </div>
+
+    <div id="heart" class="heart">&#10084;</div>
+
+    <script>
+        function accept() {
+            document.getElementById("heart").style.display = "block";
+            setTimeout(function() {
+                document.getElementById("heart").style.display = "none";
+                alert("Great! I can't wait for our date!");
+            }, 3000); // Adjust the timeout value as needed
+        }
+
+        function reject() {
+            alert("That's okay, maybe another time.");
+        }
+    </script>
+</body>
+</html>
+
+
+
